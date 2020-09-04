@@ -1,0 +1,31 @@
+{
+  "name": "bice-back",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "unit-test": "./node_modules/mocha/bin/mocha *./app/*.spec.js ./app/**/*.spec.js --reporter spec",
+    "coverage": "nyc --reporter=text ./node_modules/mocha/bin/mocha *./app/*.spec.js ./app/**/*.spec.js",
+    "coverage-report": "nyc --reporter=lcov ./node_modules/mocha/bin/mocha *./app/*.spec.js ./app/**/*.spec.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-list-endpoints": "^5.0.0",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "lodash": "^4.17.20",
+    "morgan": "~1.9.1",
+    "request": "^2.88.2",
+    "validate-date": "^2.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3",
+    "mockery": "^2.1.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.3"
+  }
+}

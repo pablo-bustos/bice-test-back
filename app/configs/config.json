@@ -1,0 +1,43 @@
+{
+  "port": "9000",
+  "security": {
+    "aes": "aes-256-ccm"
+  },
+  "responseCode": {
+    "SUCCESS": {
+      "code": 200,
+      "default": "Request succeeded."
+    },
+    "BAD_REQUEST": {
+      "code": 400,
+      "default": "Incomplete or invalid request. Please, check your input data and try again."
+    },
+    "INTERNAL_ERROR": {
+      "code": 500,
+      "default": "Internal server error. Please, contact support and try again later."
+    }
+  },
+  "api": {
+    "protocol": "http",
+    "domain": "www.indecon.online",
+    "endpoints": {
+      "last": {
+        "base_url": "/last",
+        "params": null
+      },
+      "values": {
+        "base_url": "/values",
+        "params": {
+          "key": "cobre|dolar|euro|ipc|ivp|oro|plata|uf|utm|yen"
+        }
+      },
+      "date": {
+        "base_url": "/date",
+        "params": {
+          "key": "cobre|dolar|euro|ipc|ivp|oro|plata|uf|utm|yen",
+          "date": "DD-MM-YYYY"
+        }
+      }
+    }
+  }
+}
